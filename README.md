@@ -34,7 +34,7 @@ REFERENTIAL CONTRAINT - Action to take when parent row is modified/deleted.
 
 
 
-Table Example
+Table Example:
 - DEPARTMENT (DepartmentName(PK), BudgetCode, OfficeNumber, Phone)
 
 - Employee(EmployeeNumber(PK), FirstName, LastName, DepartmentName(FK), Phone, Email) 
