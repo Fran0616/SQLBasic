@@ -32,6 +32,8 @@ CHECK - specefies what data value are allowed in a particular column
 REFERENTIAL CONTRAINT - Action to take when parent row is modified/deleted. 
 
 
+
+
 Table Example
 - DEPARTMENT (DepartmentName(PK), BudgetCode, OfficeNumber, Phone)
 
