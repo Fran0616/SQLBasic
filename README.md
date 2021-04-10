@@ -33,10 +33,10 @@ REFERENTIAL CONTRAINT - Action to take when parent row is modified/deleted.
 
 
 Table Example
-DEPARTMENT (DepartmentName(PK), BudgetCode, OfficeNumber, Phone)
+- DEPARTMENT (DepartmentName(PK), BudgetCode, OfficeNumber, Phone)
 
-Employee(EmployeeNumber(PK), FirstName, LastName, DepartmentName(FK), Phone, Email) 
+- Employee(EmployeeNumber(PK), FirstName, LastName, DepartmentName(FK), Phone, Email) 
 
-Project(ProjectID(PK), Name, DepartmentName(FK), MaxHours, StartDate, EndDate)
+- Project(ProjectID(PK), Name, DepartmentName(FK), MaxHours, StartDate, EndDate)
 
-Assigment(ProjectID(PK), EmployNumber(PK), HoursWorked)
+- Assigment(ProjectID(PK), EmployNumber(PK), HoursWorked)
