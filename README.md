@@ -17,3 +17,26 @@ CONSTRAIN PRIMARY KEY (column1),
       REFERENCES SomeTableNameGoesHere(ColumnFromTable)
 
 ```
+List of possible constraints are:
+
+PRIMARY KEY - may not have null value
+
+UNIQUE - values in a column must be unique; cant used repeated value
+
+NULL/NOT NULL - empty/not empty
+
+FOREIGN KEY - used to create referential integrity 
+
+CHECK - specefies what data value are allowed in a particular column
+
+REFERENTIAL CONTRAINT - Action to take when parent row is modified/deleted. 
+
+
+Table Example
+DEPARTMENT (DepartmentName(PK), BudgetCode, OfficeNumber, Phone)
+
+Employee(EmployeeNumber(PK), FirstName, LastName, DepartmentName(FK), Phone, Email) 
+
+Project(ProjectID(PK), Name, DepartmentName(FK), MaxHours, StartDate, EndDate)
+
+Assigment(ProjectID(PK), EmployNumber(PK), HoursWorked)
