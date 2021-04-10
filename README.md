@@ -42,3 +42,71 @@ Table Example:
 - Project(ProjectID(PK), Name, DepartmentName(FK), MaxHours, StartDate, EndDate)
 
 - Assigment(ProjectID(PK), EmployNumber(PK), HoursWorked)
+
+
+```
+CREATE TABLE Department
+   (DepartmentName varchar(20) NOT NULL,
+   BudgetCode smallint NOT NULL,
+   OfficeNumber smallint NOT NULL,
+   Phone char(18),
+   
+   CONSTRAINT PK_Deparment PRIMARY KEY(DepartmentName)
+   );
+
+
+```
+
+```
+CREATE TABLE Employee
+   (EmployeeNumber char(10) NOT NULL,
+   FirstName varchar(18) NOT NULL,
+   LastName varchar(18) NOT NULL,
+   DepartmentName varchar(20),
+   Phone char(18),
+   Email varchar(50),
+
+   CONSTRAINT PK_Employee PRIMARY KEY (EmployeeNumber),
+   CONSTRAINT FK_Dept FOREIGN KEY(DepartmentName)
+      REFERENCES DEPARTMENT(DepartmentName)
+);
+
+
+```
+
+
+```
+CREATE TABLE Assignment
+   (ProjectID char(8) NOT NULL,
+   EmployeeNumber char(10) NOT NULL,
+   HoursWorked char(48),
+
+   CONSTRAINT PK_Assignment PRIMARY KEY (PROJECTID, EmployeeNumber),
+   CONSTRAINT FK_Proj FOREIGN KEY(ProjectID)
+      REFERENCES PROJECT(ProjectID),
+   CONSTRAINT FK_Emp FOREIGN KEY(EmployeeNumber)
+      REFERENCES EMPLOYEE(EmployeeNumber)
+);
+
+
+
+
+```
+
+```
+CREATE TABLE Project
+   (ProjectID char(8) NOT NULL,
+   Name varchar(18) NOT NULL,
+   DepartmentName varchar(20),
+   MaxHous char(48),
+   StartDate date NOT NULL,
+   EndDate date,
+
+   CONSTRAINT PK_Project PRIMARY KEY (ProjectID),
+   CONSTRAINT FK_Dept2 FOREIGN KEY(DepartmentName)
+      REFERENCES DEPARTMENT(DepartmentName)
+);
+
+
+
+```
